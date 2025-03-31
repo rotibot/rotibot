@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc.json",
+    "sourceMaps": true,
+    "module": {
+        "type": "commonjs",
+        "strict": true
+    },
+    "jsc": {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true
+        },
+        "target": "es2022",
+        "keepClassNames": true,
+        "externalHelpers": true,
+        "baseUrl": "./",
+        "paths": {
+            "#/*": [
+                "./src/*"
+            ],
+            "#structures/*": [
+                "./src/structures/*"
+            ],
+            "#utils/*": [
+                "./src/utils/*"
+            ],
+            "#types/*": [
+                "./src/types/*"
+            ],
+            "#controllers/*": [
+                "./src/controllers/*"
+            ],
+            "#models/*": [
+                "./src/models/*"
+            ]
+        }
+    }
+}

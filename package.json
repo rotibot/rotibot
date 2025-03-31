@@ -1,0 +1,42 @@
+{
+    "name": "roitbot",
+    "version": "2.1.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "NODE_ENV=production node --enable-source-maps .",
+        "build": "swc src --out-dir dist --strip-leading-paths",
+        "format": "pnpx prettier --write src/.",
+        "dev": "pnpm build && concurrently --kill-others-on-fail \"swc src --out-dir dist --strip-leading-paths --watch\" \"node --enable-source-maps . --watch\"",
+        "nodemon": "pnpm build && concurrently --kill-others-on-fail \"swc src --out-dir dist --strip-leading-paths --watch\" \"node --watch dist --enable-source-maps .\"",
+        "noshard": "pnpm build && concurrently --kill-others-on-fail \"swc src --out-dir dist --strip-leading-paths --watch\" \"node --watch dist/index.js --enable-source-maps .\""
+    },
+    "devDependencies": {
+        "@imranbarbhuiya/duration": "^5.1.8",
+        "@sapphire/shapeshift": "^4.0.0",
+        "@swc/cli": "^0.5.2",
+        "@swc/core": "^1.11.4",
+        "@swc/helpers": "^0.5.15",
+        "@types/express": "^5.0.0",
+        "@types/figlet": "^1.7.0",
+        "@types/moment-duration-format": "^2.2.6",
+        "@types/mongo-sanitize": "^1.0.3",
+        "@types/node": "^22.13.5",
+        "@vitest/coverage-v8": "^2.1.9",
+        "chokidar": "3.5.1",
+        "concurrently": "^9.1.2",
+        "dotenv": "^16.4.7",
+        "matchjs": "^0.0.1",
+        "mathjs": "^14.2.1",
+        "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "colors": "^1.4.0",
+        "discord-giveaways": "^6.0.1",
+        "discord.js": "^14.16.3",
+        "dokdo": "^1.0.1",
+        "dotenv": "^16.4.5",
+        "moment-timezone": "^0.5.46",
+        "mongoose": "^8.7.3"
+    }
+}
