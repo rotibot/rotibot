@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rotibot
+  labels:
+    app: rotibot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rotibot
+  template:
+    metadata:
+      labels:
+        app: rotibot
+    spec:
+      containers:
+      - name: rotibot
+        image: rotibot:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rotibot-service
+spec:
+  selector:
+    app: rotibot
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
