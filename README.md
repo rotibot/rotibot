@@ -32,13 +32,13 @@ To add **R.O.T.I** to your server, follow these simple steps:
 3. **Configure the bot**:
     - Create a `.env` file in the root directory and add your bot's **Discord Token**:
       ```
-      DISCORD_TOKEN=your-bot-token-here
+      BOT_TOKEN=your-bot-token-here
       ```
     - Add any other necessary configuration (like prefix, logging channels, etc.)
 
 4. **Run the bot**:
     ```bash
-    node bot.js
+    pnpm dev
     ```
 
 ## Usage
@@ -84,8 +84,8 @@ We welcome contributions to **R.O.T.I**! If you would like to help improve this 
 
 Make sure to follow the code style and include relevant documentation for your changes. We appreciate all contributions!
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Support
+## Support
 If you encounter any issues or have any questions, feel free to open an issue on this repository. You can also join our support [Discord server](https://discord.gg/xD5Yb89VJx) for help.
