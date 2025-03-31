@@ -1,0 +1,13 @@
+{
+    "name": "@rotibot/rotibot",
+    "version": "10.51.0",
+    "exports": "./src/main/typescript/exports.ts",
+    "publish": {
+        "exclude": [
+            "tests",
+            "docs",
+            "blazebuild",
+            "lib"
+        ]
+    }
+}

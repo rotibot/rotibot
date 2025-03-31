@@ -1,0 +1,8 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPointStrategy": "expand",
+    "entryPoints": ["src/main/typescript", "src/framework/typescript"],
+    "out": "api_docs",
+    "plugin": ["typedoc-plugin-rename-defaults", "typedoc-theme-hierarchy"],
+    "customCss": "./typedoc/typedoc.css"
+}
